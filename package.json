@@ -5,13 +5,14 @@
   "main": "build/index.js",
   "scripts": {
     "start": "node build/index.js",
-    "watch": "yarn run nodemon",
+    "watch": "yarn run cross-env DEBUG=serve* yarn run nodemon",
     "build-all": "yarn install && npm run build",
     "build": "yarn run tsc",
     "lint": "tslint --project ."
   },
   "devDependencies": {
     "@types/node": "^9.6.6",
+    "cross-env": "^5.1.4",
     "nodemon": "1.17.3",
     "ts-node": "^6.0.0",
     "tslib": "1.9.0",
